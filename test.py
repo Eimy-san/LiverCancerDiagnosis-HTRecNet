@@ -14,12 +14,12 @@ import matplotlib.pyplot as plt
 PARAMS = Params()
 DEVICE = torch.device("cuda:0")
 
-testdata = r"datasets/val"
+testdata = r"datasets/test"
 
 def eval():
-    y_true_list = []  # 存储真实的标签
-    y_scores_list = []  # 存储模型预测的概率或得分
-    y_pred_list = []  # 存储模型预测的标签
+    y_true_list = []  
+    y_scores_list = [] 
+    y_pred_list = [] 
     # weight_files = ['weight_fold1.pth', 'weight_fold2.pth', 'weight_fold3.pth', 'weight_fold4.pth', 'weight_fold5.pth']
     # for fold_weights in weight_files:
     net = torch.load(f'{PARAMS.result_output_dir}/{PARAMS.model_name}/weight/weight_fold5.pth').to(DEVICE)
